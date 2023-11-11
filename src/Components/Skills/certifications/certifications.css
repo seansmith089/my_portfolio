@@ -1,0 +1,56 @@
+.cert_wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 3rem;
+    
+}
+
+.certs_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.certs_container > p{
+    margin-top: 2rem;
+    font-size: .9rem;
+    text-align: center;
+    padding-inline: 2rem ;
+}
+
+.cert_card{
+    width:90vw;
+    max-width: 700px;
+    background-color: white;
+    margin-top: .5rem;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px #b8b8b8;
+}
+
+.cert_skill_wrapper{
+    display: flex;
+    margin-top:1.5rem;
+    margin-left: 2rem;
+    gap:1rem;
+    align-items: center;
+}
+
+.cert_text_wrapper > h3 {
+    color: var(--title-colour-dark)
+}
+
+.cert_logo{
+    width: 50px;
+    height:50px;
+}
+
+.cert_skill_wrapper:nth-last-child(-n+1){
+    margin-bottom: 2rem;
+}
+
+.cert_description{
+    font-size: .8rem;
+}

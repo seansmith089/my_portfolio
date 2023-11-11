@@ -1,24 +1,45 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+
+// NAVBAR IMPORT
+import Navbar from "./Components/Navbar/Navbar";
+
+// PAGES IMPORT
+import Home from "./pages/Home/Home";
+import Contact from "./pages/Contact/Contact";
+import Projects from "./pages/Projects/Projects";
+import About from "./pages/About/About";
+import Skills from "./pages/Skills/Skills";
+import NavScreenBlur from "./Components/Navbar/NavScreenBlur";
+
+import { Routes, Route } from "react-router";
+import { useState } from "react";
+import useViewport from "./CustomHooks/UseViewport";
+
 
 function App() {
+
+    const [navBlur, setNavBlur] = useState(false)
+
+    const {width, breakpoint_medium} = useViewport()
+
+    function changeBlur(){
+        if(width < breakpoint_medium){
+            setNavBlur(() => !navBlur);
+        }else return 
+    }
+    
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Navbar navBlur={navBlur} changeBlur={changeBlur} />
+      <NavScreenBlur navBlur={navBlur} />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/skills" element={<Skills />} />
+      </Routes>
+    </>
   );
 }
 

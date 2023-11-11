@@ -1,0 +1,122 @@
+.home-page{
+    background-image: url(../../images/bg_wide.png);
+    height: 100%;
+    background-size: cover;
+    background-position: -350px 0;
+    overflow: hidden;
+    position: absolute;
+    top:50px;
+    left:0;
+    right:0;
+}
+
+.home-container{
+    display:flex;
+    justify-content: center;
+}
+
+.home-text-container{
+    margin-left: 1rem;
+}
+
+.home-name-container{
+    margin-top:2rem;
+}
+
+.home-name-container > h1 {
+    font-size: 6rem;
+}
+
+.home-icons-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    padding-inline: 1rem;
+}
+
+.home-social-icon{
+    transform: scale(1.6);
+    color: var(--title-colour)    
+}
+
+.subheading-wrapper{
+    display: flex;
+    margin-top: 1rem;
+}
+
+.line-container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex:30%;
+}
+
+.home-line-div{
+    width:100%;
+    height:2px;
+    background-color: var(--title-colour);
+    position:absolute;
+    top:50%;
+    border-radius: 100;
+}
+
+.home-subheading{
+    font-size: 1.2rem;
+    padding-left: 5px;
+    flex:70%;
+}
+
+article{
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.home-summary{
+    max-width: 300px;
+    text-align: center;
+}
+
+.home-button-wrapper{
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 6rem;
+}
+
+.home-button-main{
+    backdrop-filter: blur(4px);
+    background-color: rgba(199, 199, 199, 0.158);
+    padding:1rem 3rem;
+    border-radius: 10px;
+    border: 2px solid var(--title-colour-dark);
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.home-button-main > a{
+    text-decoration: none;
+    color: var(--title-colour-dark);
+}
+
+.home-button-main > a:visited{
+    text-decoration: none;
+    color: var(--title-colour-dark);
+}
+
+
+
+/* move button higher for shorter screens */
+@media(max-height:700px){
+    .home-button-wrapper{
+    margin-top: 3rem;
+    }
+}
+
+@media(min-height: 700px){
+    .home-container{
+        margin-top:3rem;
+    }
+
+}

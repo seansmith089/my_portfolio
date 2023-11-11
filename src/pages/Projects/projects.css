@@ -1,0 +1,19 @@
+.project-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--body-colour);
+}
+
+.project_items_container {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: 100%;
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 1200px) {
+  .project_items_container {
+    grid-template-columns: 33% 33% 33%;
+  }
+}

@@ -1,0 +1,246 @@
+.form_wrapper{
+    margin-top:1.5rem;
+    width:85%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10rem;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.form input{
+    background-color: var(--body-colour);
+    padding-block: .6rem;
+    padding-inline: 1rem;
+    border: 2px solid var(--title-colour-dark);
+    border-radius: 9px;
+    font-size: 1.3rem;
+    margin-top: 1rem;
+}
+
+input:focus{
+    outline: none;
+}
+
+.form label{
+    position: absolute;
+    background-color: var(--body-colour);
+    padding-inline: 5px;
+    color:var(--title-colour-dark);
+}
+
+.name_label{
+    left: 14px;
+    top:5px;
+}
+
+.email_label{
+    left:14px;
+    top:71px;
+}
+
+.message_label{
+    left:14px;
+    top:136px;
+}
+
+textarea{
+    background-color: var(--body-colour);
+    padding-block: 1rem;
+    padding-inline: 1rem;
+    border: 2px solid var(--title-colour-dark);
+    border-radius: 9px;
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+textarea:focus{
+    outline: none;
+}
+
+.send_btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    padding-block: .9rem;
+    border-radius: 9px;
+    border:none;
+    background-color: var(--title-colour-dark);
+    font-size: 1.3rem;
+    color: var(--body-colour)
+}
+
+.send_btn:hover{
+    cursor: pointer;
+}
+
+.send_icon{
+    margin-left: .5rem;
+}
+
+
+.icon_wrapper{
+    display: flex;
+    justify-content: space-around ;
+    margin-top: 2rem;
+    width:100%;
+}
+
+.whatsapp_border, .email_border, .messenger_border{
+    display:flex;
+    flex-direction: column;
+    box-shadow: 0px 5px 15px #b8b8b8; 
+    background-color: rgb(248, 248, 248);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 9px;
+    height:fit-content;
+    width: fit-content;
+}
+
+.whatsapp_icon, .email_icon, .messenger_icon{   
+    color: rgb(70, 70, 70);
+    width: 80px;
+    height: 80px;
+    margin: 0 .5rem 0 .5rem;
+    padding: 0 1.2rem 0 1.2rem;
+    transition: .2s ease-in-out;
+}
+
+.icon_text{
+    font-size: .8rem;
+    margin-top: 0;
+    font-weight: 600;
+    padding-bottom: .7rem;
+}
+
+.message_me_wrapper{
+    position: relative;
+    margin-top: .5rem;
+    margin-bottom: .7rem;
+}
+
+.arrow_styles{
+    width:13px;
+    height:13px;
+    color: var(--text-colour);
+
+}
+
+.whatsapp_arrow_pos{
+    position: absolute;
+    left:80px;
+    top:23px;
+    transition: .2s ease-in-out;
+}
+
+.email_arrow_pos{
+    position: absolute;
+    left:100px;
+    top:23px;
+    transition: .2s ease-in-out;
+}
+
+.messenger_arrow_pos{
+    position: absolute;
+    left:80px;
+    top:23px;
+    transition: .2s ease-in-out;
+
+}
+
+.msg_me_txt{
+    font-size: .8rem;
+    text-align: center;
+    padding-right: 1.6rem;
+    transition: .2s ease-in-out;
+    color: var(--text-colour)
+}
+
+.contact_details{
+    font-size: .7rem;
+    color: var(--text-colour);
+    margin-bottom: .5rem;
+}
+
+.whatsApp_launcher{
+        border: none;
+    }
+
+@media(max-width:375px){
+    .whatsapp_icon, .email_icon, .messenger_icon{
+        width: 55px;
+        height: 55px;
+    }
+}
+
+@media(min-width:481px){
+    .form_wrapper{
+        flex-direction: row-reverse;
+        justify-content: center;
+    }
+    .icon_wrapper{
+        flex-direction: column;
+        margin-right: 1.5rem;
+        height: 100%;
+        padding-top: 1rem;
+        gap:.5rem;
+    }
+    .icon_wrapper{
+        width: fit-content;
+        margin-top: .3rem;
+    }
+    .form{
+        width: 80%;
+    }
+    
+    .whatsapp_icon, .email_icon, .messenger_icon{
+        width: 60px;
+        height:60px;
+        margin-inline: 3rem;
+        margin-bottom: .2rem;
+        padding: 0 .8rem 0 .8rem;
+    }
+
+    .email_icon{
+        margin-bottom: 0;
+    }
+
+    .whatsapp_border:hover, .email_border:hover, .messenger_border:hover{
+        cursor: pointer;
+    }
+
+    /* WHATSAPP BUTTON HOVER EFFECTS */
+    .whatsapp_border:hover .whatsapp_arrow_pos{
+        left: 83px;
+    }
+
+    .whatsapp_border:hover .whatsapp_icon{
+        color:#25D366
+    }
+
+   /* EMAIL BUTTON HOVER EFFECTS */
+   .email_border:hover .email_arrow_pos{
+        left: 103px;
+    }
+    .email_border:hover .email_icon{
+        color:#c71610
+    }
+
+    /* MESSENGER BUTTON HOVER EFFECTS */
+   .messenger_border:hover .messenger_arrow_pos{
+        left: 83px;
+    }
+    .messenger_border:hover .messenger_icon{
+        color:#0099FF;
+    }
+    
+}
+
+

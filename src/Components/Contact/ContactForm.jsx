@@ -2,6 +2,7 @@ import useViewport from "../../CustomHooks/UseViewport";
 import { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import ReactWhatsapp from "react-whatsapp";
+import { useNavigate } from "react-router";
 
 import "./contactForm.css";
 import { LuSendHorizonal } from "react-icons/lu";
@@ -11,15 +12,17 @@ import { AiOutlineArrowRight } from "react-icons/ai";
 
 function ContactForm() {
   const { width, breakpoint_small } = useViewport();
-
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+
+  const navigate = useNavigate()
 
   const form = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
+
 
     emailjs
       .sendForm(
@@ -31,6 +34,7 @@ function ContactForm() {
       .then(
         (result) => {
           console.log(result.text);
+          navigate("/thanks")
         },
         (error) => {
           console.log(error.text);

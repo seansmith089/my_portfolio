@@ -243,4 +243,12 @@ textarea:focus{
     
 }
 
+@media(min-width:769px){
+    .send_btn{
+        width: 50%;
+        margin-right: 0;
+        margin-left: auto;
+    }
+
+}
 

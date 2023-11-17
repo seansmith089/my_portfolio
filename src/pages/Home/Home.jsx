@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 function Home() {
     return (
-      <div className="home-page">
+      <div className="color_bg">
         <main className="home-container">
           <div className="home-text-container">
             <div className="home-name-container">

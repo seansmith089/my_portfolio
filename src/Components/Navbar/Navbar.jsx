@@ -33,7 +33,7 @@ function Navbar({ navBlur, changeBlur }) {
         <li className="nav__item">
           <NavLink
             to="/projects"
-            className="nav__link"
+            className="nav__link projects_btn"
             onClick={navToggle}
             style={({ isActive }) =>
               width > breakpoint_medium
